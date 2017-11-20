@@ -1,0 +1,93 @@
+
+* {
+    font-family: arial;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+/* ####################################################################### */
+
+h3 {
+    text-decoration: underline;
+}
+
+.btn {
+    padding: 7px 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.blue { background-color: #3498db; border: 0; color: white; }
+.green { background-color: #1abc9c; border: 0; color: white; }
+.red { background-color: #e65a4d; border: 0; color: white; }
+
+/* ####################################################################### */
+
+main ul {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main ul li {
+    width: 270px;
+    list-style: none;
+    border-top: 1px solid #ddd;
+    margin-left: -40px;
+    margin-bottom: 20px;
+}
+
+main ul li img {
+    width: 270px;
+}
+
+main ul li span {
+    display: block;
+    font-size: 14px;
+}
+
+img.imgdetail {
+    float: right;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+/* ####################################################################### */
+
+input {
+    display: block;
+    margin-bottom: 12px;
+    width: calc(100% - 8px);
+}
+
+textarea {
+    width: calc(100% - 8px);
+    margin-bottom: 20px;
+}
+
+/* ####################################################################### */
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
