@@ -20,7 +20,7 @@ class ProductModel {
         return $result->fetch();
     }
 
-    public static function addProduct($nom, $description, $prix) {
+    public static function addProduct($nom, $description, $prix, $image) {
         $db = new Database();
         $sql = "INSERT INTO produits (nom, description, prix, image, date_creation) 
                 VALUES (:nom, :description, :prix, :image, :date)";
@@ -30,7 +30,7 @@ class ProductModel {
                 ":nom" => $nom,
                 ":description" => $description,
                 ":prix" => intval($prix),
-                ":image" => "nophoto.png",
+                ":image" => $image,
                 ":date" => date('Y-m-d H:i:s')
             )
         )) 

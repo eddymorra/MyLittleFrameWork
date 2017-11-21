@@ -23,7 +23,7 @@ class Kernel {
             $instance = new $class();
             $instance->run($datas["params"]);
         } else {
-            echo "La page demandée n'existe pas !";
+            echo "Problème, un élément demandé n'existe pas !";
         }
     }
 

@@ -4,7 +4,7 @@
 if(isset($message)) {
     echo $message;
     ?>
-        <br><br><a class="btn" href="<?= $base ?>">Retour</a>
+        <br><br><a class="btn" href="<?= BASE ?>">Retour</a>
     <?php
 } else {
     ?>

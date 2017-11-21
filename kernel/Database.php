@@ -5,11 +5,13 @@ class Database {
     protected $_db;
 
     public function __construct() {
-        $this->_db = new PDO(
-            "mysql:host=localhost;dbname=fwmvc;charset=utf8",
-            "root",
-            "test"
-        );
+        // Configuration de connexion à la base de données
+        $host = "localhost";
+        $db = "fwmvc";
+        $user = "root";
+        $pass = "test";
+
+        $this->_db = new PDO("mysql:host=".$host.";dbname=".$db.";charset=utf8", $user, $pass);
     }
 
     public function __call($method, array $arg) {

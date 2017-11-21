@@ -1,6 +1,6 @@
 <h3>Détails du produit</h3>
 
-<img class="imgdetail" src="<?= $base."public/images/".$product->image; ?>" alt="image du langage">
+<img class="imgdetail" src="<?= BASE."public/images/".$product->image; ?>" alt="image du langage">
 
 <?php
 
@@ -14,5 +14,5 @@ echo "Publié le : ".$product->date."<br><br>";
 
 ?>
 
-<a class="btn" href="<?= $base ?>">Retour</a>
+<a class="btn" href="<?= BASE ?>">Retour</a>
 
