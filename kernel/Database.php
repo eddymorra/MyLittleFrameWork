@@ -5,7 +5,7 @@ class Database {
     protected $_db;
 
     public function __construct() {
-        // Configuration de connexion à la base de données
+        // Eléments de connexion à la base de données
         $host = "localhost";
         $db = "fwmvc";
         $user = "root";

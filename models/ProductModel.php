@@ -41,4 +41,29 @@ class ProductModel {
         }
     }
 
+    public static function editProduct($id, $nom, $description, $prix, $image) {
+        $db = new Database();
+        $sql = "UPDATE produits 
+                SET nom = :nom,
+                description = :description,
+                prix = :prix,
+                image = :image
+                WHERE id = :id";
+        $edit = $db->prepare($sql);
+        if ($edit->execute(
+            array(
+                ":nom" => $nom,
+                ":description" => $description,
+                ":prix" => intval($prix),
+                ":image" => $image,
+                ":id" => $id
+            )
+        )) 
+        {
+            return "Le produit a bien été modifié !";
+        } else {
+            return "Erreur, le produit n'a pu être modifié !";
+        }
+    }
+
 }

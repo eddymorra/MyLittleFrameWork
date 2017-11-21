@@ -16,14 +16,18 @@ class Kernel {
         spl_autoload_register(array("Kernel", "autoload"));
 
         $query = isset($_GET["query"]) ? $_GET["query"] : "";
-        $datas = Router::analyze($query);
+        $route = Router::analyze($query);
 
-        $class = $datas["controller"]."Controller";
+        $class = ucfirst($route["controller"])."Controller";
+
         if (class_exists($class)) {
-            $instance = new $class();
-            $instance->run($datas["params"]);
+            $controller = new $class();
+            $method = array($controller, $route["action"]);
+            if(is_callable($method)) {
+                call_user_func($method, $route["params"]);
+            }
         } else {
-            echo "Problème, un élément demandé n'existe pas !";
+            echo "Désolé, cette page n'existe pas !";
         }
     }
 

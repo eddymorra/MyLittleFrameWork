@@ -11,15 +11,13 @@
     
     <header>
         <h1>MyLittleFrameWork 1.0</h1>
-        <hr>
         <nav>
             <ul>
                 <li><a href="<?= BASE.""; ?>">Liste de produits</a></li>
-                <li><a href="<?= BASE."add"; ?>">Ajouter un produit</a></li>
+                <li><a href="<?= BASE."add-product"; ?>">Ajouter un produit</a></li>
                 <li><a href="<?= BASE."contact"; ?>">Contact</a></li>
             </ul>
         </nav>
-        <hr>
     </header>
 
     <main>

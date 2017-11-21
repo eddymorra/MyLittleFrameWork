@@ -1,4 +1,4 @@
-<h3>Ajouter un produit :</h3>
+<h3>Modifier le produit n°<?php $product->id ?> :</h3>
 
 <?php
 if(isset($message)) {

@@ -3,8 +3,10 @@
 class Router {
 
     public static function analyze($query) {
+        // Valeur par défaut de la route
         $datas = array(
-            "controller" => "Products",
+            "controller" => "index",
+            "action" => "run",
             "params" => array()
         );
 
@@ -15,20 +17,29 @@ class Router {
         /////////////////////////////////////////////////////////
         // Page de départ -> liste de produits
         if($partsQuery[0] == "") {
-            $datas["controller"] = "Products";
+            $datas["controller"] = "product";
+            $datas["action"] = "getProducts";
         } 
         // Page Product -> Détail d'un produit (par l'id)
         elseif ($partsQuery[0] == "product") {
-            $datas["controller"] = "Product";
+            $datas["controller"] = "product";
+            $datas["action"] = "getProductById";
             $datas["params"]["id"] = $partsQuery[1];
         } 
         // Page Add -> Ajouter un produit
-        elseif ($partsQuery[0] == "add") {
-            $datas["controller"] = "AddProduct";
+        elseif ($partsQuery[0] == "add-product") {
+            $datas["controller"] = "product";
+            $datas["action"] = "addProduct";
+        } 
+        // Page Edit -> Modifier un produit
+        elseif ($partsQuery[0] == "edit-product") {
+            $datas["controller"] = "product";
+            $datas["action"] = "editProduct";
+            $datas["params"]["id"] = $partsQuery[1];
         } 
         // Page Contact -> Formulaire de contact
         elseif ($partsQuery[0] == "contact") {
-            $datas["controller"] = "Contact";
+            $datas["controller"] = "contact";
         }
         /////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////

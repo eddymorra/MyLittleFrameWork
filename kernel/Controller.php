@@ -1,7 +1,7 @@
 <?php
 
-abstract class Controller {
+class Controller {
 
-    abstract public function run($params);
+    
 
 }
