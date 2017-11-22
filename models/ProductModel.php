@@ -2,6 +2,7 @@
 
 class ProductModel {
 
+    // Requête qui renvoie la liste de tout les produits.
     public static function getList() {
         $db = new Database();
         $sql = "SELECT * FROM produits ORDER BY date_creation DESC";
@@ -10,6 +11,7 @@ class ProductModel {
         return $result->fetchAll();
     }
 
+    // Requête qui renvoie un produit par son ID.
     public static function getProductById($id) {
         $db = new Database();
         $sql = "SELECT id, nom, description, prix, image, DATE_FORMAT(date_creation, '%d/%m/%Y à %Hh%i') AS date 
@@ -20,6 +22,7 @@ class ProductModel {
         return $result->fetch();
     }
 
+    // Requête qui ajoute un nouveau produit.
     public static function addProduct($nom, $description, $prix, $image) {
         $db = new Database();
         $sql = "INSERT INTO produits (nom, description, prix, image, date_creation) 
@@ -41,6 +44,7 @@ class ProductModel {
         }
     }
 
+    // Requête qui modifie un produit retrouvé par son ID.
     public static function editProduct($id, $nom, $description, $prix, $image) {
         $db = new Database();
         $sql = "UPDATE produits 

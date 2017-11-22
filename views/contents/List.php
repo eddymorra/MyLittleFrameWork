@@ -1,6 +1,6 @@
 <h3>Liste de produits :</h3>
 
-<ul>
+<ul class="produits">
     <?php foreach ($products as $product) { ?>
         <li>
             <a href="product/<?= $product->id; ?>">

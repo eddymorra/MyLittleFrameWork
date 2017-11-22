@@ -18,7 +18,7 @@ body {
 header h1 {
     border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
-    padding: 4px;
+    padding: 9px;
     font-size: 24px;
 }
 
@@ -59,9 +59,10 @@ h3 {
 
 .btn {
     padding: 7px 14px;
+    border: none;
     border: 1px solid black;
-    border-radius: 4px;
     font-size: 14px;
+    background-color: transparent;
 }
 
 .large {width: 100%; font-size: 16px; padding: 10px 20px; margin-top: 10px;}
@@ -72,7 +73,7 @@ h3 {
 
 /* ####################################################################### */
 
-main ul {
+main ul.produits {
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
@@ -80,7 +81,7 @@ main ul {
     margin: 0;
 }
 
-main ul li {
+main ul.produits li {
     width: 270px;
     list-style: none;
     border-top: 1px solid #dddddd;
@@ -88,11 +89,11 @@ main ul li {
     margin-bottom: 40px;
 }
 
-main ul li img {
+main ul.produits li img {
     width: 270px;
 }
 
-main ul li span {
+main ul.produits li span {
     display: block;
     font-size: 14px;
     border-left: 1px solid #dddddd;
@@ -108,6 +109,20 @@ img.imgdetail {
 
 /* ####################################################################### */
 
+main ul.comments li {
+    list-style: none;
+    margin-left: -40px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0 7px 7px 7px;
+}
+
+form.newComment {
+    margin: 20px 0;
+}
+
+/* ####################################################################### */
+
 main h4 {
     font-size: 18px;
 }
@@ -117,6 +132,13 @@ main p {
 }
 
 /* ####################################################################### */
+
+input, textarea, select {
+    border: none;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    padding: 7px;
+}
 
 input {
     display: block;
@@ -135,7 +157,7 @@ textarea {
 
 .moitie {
     display: inline-block;
-    width: 42%;
+    width: 45%;
 }
 
 /* ####################################################################### */
